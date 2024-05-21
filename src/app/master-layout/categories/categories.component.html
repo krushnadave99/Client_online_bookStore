@@ -1,0 +1,38 @@
+<section class="">
+  <div class="mt-2">
+    <div class="col-sm-2">
+      <label>BookCatgories:</label>
+      <select  class="form-control" >
+          <option>Select BookCatgories</option>
+          <option *ngFor="let item of bookCat;let i=index" [value]="i"  (change)="selectType(item)">{{item.type}}</option>
+      </select>
+  </div>
+    <h3 class="text-center">
+      Books
+    </h3>
+  </div>
+</section>
+<div class="container">
+  <div class="row m-0">
+    <ng-container *ngFor="let item of bookList;let i =index">
+      <div class="card">
+        <div class="content">
+          <a class="front">
+            <img [src]="'http://localhost:3000/'+item.imageUrl" alt="Booklist" class="img mt-3">
+            <div class="d-flex justify-content-around mt-4">
+              <span> {{item.bookname}}</span>
+              <span> {{item.type}}</span>
+            </div>
+            <div class="d-flex justify-content-around">
+              <span> {{item.price}}</span>
+              <img src="/assets/images/fav.png" width="25px;">
+            </div>
+            <button class="btn btn-success mt-2" (click)="addtocart(item)">Add To Cart</button>
+          </a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <hr>
+ 
+</div>

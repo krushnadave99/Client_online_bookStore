@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="card">
+      <h1 class="card-title">Sign Up</h1>
+      <div class="card-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="card-input-container username">
+              <input type="text" placeholder="Enter your username"  [(ngModel)]="UserList.username">
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Email</label>
+            <div class="card-input-container Email">
+              <input type="email" placeholder="Enter your Email"  [(ngModel)]="UserList.email">
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="card-input-container password">
+              <input type="password" placeholder="Enter your password"   [(ngModel)]="UserList.password">
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="moblieno">Moblie No</label>
+            <div class="card-input-container password">
+              <input type="number" placeholder="Enter your Moblie no"  [(ngModel)]="UserList.mobileno">
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+        <button class="card-button" type="submit" (click)="onSubmitRegistration()">Sign UP</button>
+      </div>
+    </div>
+  </div>

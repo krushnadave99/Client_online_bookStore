@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="card">
+      <h1 class="card-title">Sign In</h1>
+      <small class="card-subtitle">Enter your credentials and get access</small>
+      <div class="card-form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <div class="card-input-container username">
+              <input type="text" [(ngModel)]="UserList.username" placeholder="Enter your username"/>
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Email</label>
+            <div class="card-input-container username">
+              <input type="email" [(ngModel)]="UserList.email" placeholder="Enter your Email"/>
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="card-input-container password">
+              <input type="password" placeholder="Enter your password" [(ngModel)]="UserList.password">
+              <span>{{strErr}}</span>
+            </div>
+          </div>
+        <button class="card-button" type="submit"(click)="onSubmitLogin()">Sign In</button>
+        <asl-google-signin-button type='standard' size='large' text="signin_with" class="mx-auto"/>
+      </div>
+    </div>
+  </div>
+  
+  <!-- username ==>demo123
+  password==>jp1313
+  email==>abc@gmail.com -->
